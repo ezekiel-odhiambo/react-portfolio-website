@@ -1,0 +1,78 @@
+.UniqueApp {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.UniqueTopContent {
+    text-align: center;
+    color: white;
+    /*margin-top: -50px;  Adjust this value as needed */
+  }
+  
+
+.UniqueTabs {
+    margin-bottom: 20px;
+}
+
+.UniqueTabButton {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: blue; /* Change the color to blue */
+}
+
+.UniqueTabButton.UniqueActive {
+    background-color: #ddd;
+}
+
+.UniqueTabButton:focus {
+    outline: none;
+}
+
+.UniqueProjectCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.UniqueCard {
+    flex: 1 1 270px;
+    min-height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.UniqueCard h3 {
+    margin-top: 0;
+}
+
+.UniqueCard p {
+    margin-bottom: 0;
+}
+
+.UniqueProjectDescription {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* For big screens */
+@media (min-width: 768px) {
+    .UniqueTopContent {
+      text-align: center;
+      
+     /* margin-top: -70px;  Adjust this value as needed */
+    }
+  }

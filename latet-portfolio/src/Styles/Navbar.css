@@ -1,0 +1,136 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100vw;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000; /* Ensure the navbar is stacked above other elements */
+  box-sizing: border-box;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logo img {
+  height: 40px; /* Adjust height as needed */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1); /* Increase size on hover */
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #ddd;
+}
+
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-icon div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease;
+}
+
+.hamburger-icon.active div:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-icon.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.active div:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 60px; /* Adjust this value based on the height of your navbar */
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 0;
+    transition: max-height 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    justify-content: flex-start; /* Align menu items to the left */
+  }
+
+  .menu.active {
+    max-height: 200px; /* Adjust as needed */
+    overflow: hidden; /* Remove scrollbar */
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu li {
+    margin: 5px 0;
+  }
+
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 10px;
+  }
+
+  .menu li a:hover {
+    color: #ddd;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 769px) {
+  .menu {
+    position: static; /* Reset to default position */
+    justify-content: flex-end; /* Reset to default alignment */
+    background-color: transparent; /* Reset background color */
+    max-height: none; /* Reset max height */
+  }
+}

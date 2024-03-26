@@ -1,0 +1,87 @@
+/* cv.css */
+
+.paper-background {
+  background-color:white;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.cvbody {
+  background-color: #111;
+}
+
+#info,
+main {
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+#info {
+  margin: 30px auto;
+}
+
+main {
+  margin: 0 auto;
+}
+
+#info h1 {
+  margin: 0;
+}
+
+#info h2 {
+  margin: 0;
+}
+
+/* DISPLAY */
+@media screen and (max-width: 799px) {
+  .cvbody {
+    background-color: rgb(47, 46, 44);
+  }
+
+  #info .left {
+    text-align: center;
+  }
+  #info .right {
+    text-align: center;
+    margin-top: 20px;
+  }
+  section .right {
+    margin: 20px;
+  }
+  section h3 {
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+.left h3 {
+  margin-top: 10px;
+}
+
+.work-item {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.work-item p {
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.back-button {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: blue;
+}

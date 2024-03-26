@@ -1,0 +1,73 @@
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /*background-color: #111; */
+}
+
+.hero-section {
+  display: flex;
+  flex-wrap: wrap; /* Allow content to wrap on small screens */
+  width: 100%; /* Set the width to cover the entire viewport */
+  max-width: 100%; /* Ensure the width doesn't exceed the viewport width */
+}
+
+.content-left {
+  flex: 1;
+  padding: 20px;
+  color: white;
+  margin-right: 5px; /* Adjusted margin */
+  min-height: 80vh; /* Set minimum height to cover at least 80% of the viewport height */
+}
+
+.background-right {
+  flex: 1.7;
+  display: flex;
+  align-items: center;
+}
+
+.background-right img {
+  max-width: 85%; /* Adjusted width with margin */
+  height: auto;
+  max-height: 75vh;
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Remove hover effect */
+.background-right img {
+  animation: scaleImage 2s infinite alternate;
+}
+
+@keyframes scaleImage {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .hero-section {
+    justify-content: center; /* Center content on small screens */
+  }
+
+  .content-left {
+    margin-right: 0; /* Remove margin on small screens */
+    margin-bottom: 5px; /* Add margin at the bottom for spacing */
+  }
+
+  .background-right {
+    margin-left: 0; /* Remove margin on small screens */
+  }
+}
+
+
+

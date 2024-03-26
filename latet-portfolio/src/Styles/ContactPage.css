@@ -1,0 +1,89 @@
+.contact-heading {
+  text-align: center;
+  margin-top: 40px;
+  color: #fff;
+}
+
+
+
+.contact-columns {
+  display: flex;
+  gap: 70px;
+  align-items: start;
+  justify-content: center; /* Center the components horizontally */
+}
+
+.contact-info {
+  /* Styles for the left column */
+}
+
+.separator {
+  width: 7px;
+  height: 150px;
+  margin-top: 50px;
+  background-color: white;
+  /* align-self: center;  Center the separator vertically */
+}
+
+.contact-form-container {
+  /* Styles for the container of the form */
+}
+
+.contact-form {
+  /* Styles for the form */
+}
+
+.form-input,
+textarea {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: black; /* Set background color to grey */
+  color: #fff; /* Set text color to white */
+}
+
+.form-input::placeholder,
+textarea::placeholder {
+  color: #fff; /* Set placeholder text color to white */
+}
+
+.submit-button {
+  padding: 10px 10px; /* Adjust padding */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px; /* Adjust font size */
+  width: auto; /* Allow button width to adjust based on content */
+}
+
+.sending {
+  cursor: not-allowed;
+  background-color: #ddd;
+}
+
+.contact-page h2 {
+  grid-column: span 2;
+}
+
+/* Styles for the icon elements */
+.contact-info a {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  color: #fff; /* Set text color to white */
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.contact-info a:hover {
+  transform: scale(1.1); /* Scale the icon when hovered */
+}
+
+.contact-info a svg {
+  font-size: 28px; /* Increase icon size */
+  margin-right: 10px; /* Add margin for spacing */
+}

@@ -1,0 +1,184 @@
+.half-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.half-row p {
+  width: 50%;
+  padding-top: 100px;
+}
+
+.half-row img {
+  width: 400px; /* Adjust width to take up half of the row */
+  height: 400px; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make the image a circle */
+}
+
+.section-About {
+  padding: 20px;
+  /*background-color: #111;*/
+  color: white;
+}
+
+.emoji {
+  font-size: xx-large;
+}
+
+/* For small screens, including mobile */
+@media only screen and (max-width: 768px) {
+  .half-row p {
+    width: 100%; /* Make the paragraph cover the entire viewport */
+    padding-top: 20px; /* Adjust padding as needed */
+  }
+  .half-row img {
+    width: 100%; /* Make the image width cover the entire viewport */
+    height: auto; /* Let the height adjust according to the width */
+    max-width: 400px; /* Limit the maximum width of the image */
+    margin: auto; /* Center the image horizontally */
+    display: block; /* Ensure proper block-level display */
+  }
+}
+
+/*****************story-telling******************/
+
+.story-head {
+  padding-left: 80px;
+  color: white;
+}
+
+.story-section {
+  color: white;
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Wrap items to next row if necessary */
+  gap: 10px; /* Gap between grid items */
+  padding-bottom: 20px; /* Add padding to the bottom */
+}
+
+.story-section .card {
+  flex: 1; /* Equal flex distribution */
+  padding: 10px; /* Add padding to the cards */
+  margin-bottom: 40px; /* Add margin to the bottom of the cards */
+  border: 3px solid #111; /* Add border for clarity */
+  background-color:white ;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(245, 249, 249, 0.1); /* Add shadow to the cards */
+  color: black;
+}
+
+.story-section .first-card {
+  flex-basis: 100%; /* Take up full width initially */
+}
+
+.card p {
+  margin: 0; /* Remove default margin */
+}
+
+@media screen and (min-width: 768px) {
+  .story-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2px;
+  }
+
+  .story-section .card {
+    width: calc(50% - 1px);
+    margin: 0;
+  }
+
+  .story-section .first-card {
+    margin-left: 80px; /* Add margin to the right of the first card */
+  }
+
+  .story-section .card:nth-child(2) {
+    margin-left: -80px; /* Adjust margin to move the second card closer to the first */
+  }
+}
+
+.card {
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth scaling */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+/************skills and experience css************/
+
+
+.skills {
+  margin-left: 80px;
+}
+
+.skills h1 {
+  color: #007bff;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.skills-list li {
+  position: relative;
+  margin-bottom: 20px; /* Adjust spacing between list items */
+  padding-bottom: 10px;
+  color: white;
+}
+
+.skills-list li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%; /* Adjust the initial width of the bar */
+  height: 5px; /* Adjust the height of the bar */
+  background-color: #007bff; /* Adjust the color of the bar */
+}
+
+/* Additional styling for the percentage bars */
+.skills-list li:nth-child(1)::after {
+  width: 90%; /* Adjust the width of the bar for the first item */
+}
+
+.skills-list li:nth-child(2)::after {
+  width: 80%; /* Adjust the width of the bar for the second item */
+}
+
+.skills-list li:nth-child(3)::after {
+  width: 70%; /* Adjust the width of the bar for the third item */
+}
+
+@media screen and (max-width: 600px) {
+  /* Adjust styles for smaller screens */
+  .skills-list li::after {
+    height: 2px; /* Decrease height of bars for smaller screens */
+  }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.skills h1 {
+  display: inline-block; /* Ensures the h1 takes only as much width as necessary */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  margin: 0 auto;  /*Centers the text */
+  overflow: hidden; /* Hides overflowing text */
+  position: relative; /* Allows absolute positioning of ::after pseudo-element */
+  animation: typing 5s steps(40, end) forwards, blink-caret 0.75s step-end infinite; /* Adjust timing as needed */
+}
+
+/* Blinking cursor animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: white; }
+}
+
+.skills h1::after {
+  /*content: "|";  Displaying the typing cursor */
+  /*position: absolute;  Positioning relative to the h1 element */
+  right: 0; /* Align cursor to the right of each letter */
+  animation: blink-caret 0.75s step-end infinite; /* Adjust timing as needed */
+}
+

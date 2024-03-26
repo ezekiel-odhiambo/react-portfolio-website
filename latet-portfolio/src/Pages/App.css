@@ -1,0 +1,17 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set the minimum height of the app container to full viewport height */
+}
+
+.content {
+  flex-grow: 1; /* Allow the content container to grow and occupy remaining space */
+  padding-top: 60px; /* Adjust this value to match the height of your navbar */
+}
+
+body {
+ background-color: black;
+}
+
+
+
