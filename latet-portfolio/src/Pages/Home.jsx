@@ -72,7 +72,7 @@ function Home() {
                   </Card.Body>
                 </Link>
               </Card>
-            )}
+            )}   
           </div>
         </div>
         {/* Background Image on the Right */}
