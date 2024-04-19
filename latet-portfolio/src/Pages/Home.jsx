@@ -75,7 +75,7 @@ function Home() {
             )}   
           </div>
         </div>
-        {/* Background Image on the Right */}
+        {/* Background     Image   on the Right */}
         <div className="background-right">
           <img src={backgroundImage} alt="Background" />
         </div>

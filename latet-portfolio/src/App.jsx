@@ -10,7 +10,7 @@ import "./Pages/App.css";
 
 function App() {
   return (
-    <Router>
+    <Router basename="tothepoint_latet-portfolio">
       <div className="App">
         <Navbar />
         <div className="content">
