@@ -59,7 +59,7 @@
   padding: 10px; /* Add padding to the cards */
   margin-bottom: 40px; /* Add margin to the bottom of the cards */
   border: 3px solid #111; /* Add border for clarity */
-  background-color:white ;
+  background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(245, 249, 249, 0.1); /* Add shadow to the cards */
   color: black;
@@ -99,11 +99,10 @@
 }
 
 .card:hover {
-  transform: scale(1.05); /* Scale up on hover */
+  transform: scale(1.03); /* Scale up on hover */
 }
 
 /************skills and experience css************/
-
 
 .skills {
   margin-left: 80px;
@@ -156,23 +155,33 @@
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 .skills h1 {
   display: inline-block; /* Ensures the h1 takes only as much width as necessary */
   white-space: nowrap; /* Prevents the text from wrapping */
-  margin: 0 auto;  /*Centers the text */
+  margin: 0 auto; /*Centers the text */
   overflow: hidden; /* Hides overflowing text */
   position: relative; /* Allows absolute positioning of ::after pseudo-element */
-  animation: typing 5s steps(40, end) forwards, blink-caret 0.75s step-end infinite; /* Adjust timing as needed */
+  animation: typing 5s steps(40, end) forwards,
+    blink-caret 0.75s step-end infinite; /* Adjust timing as needed */
 }
 
 /* Blinking cursor animation */
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: white; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }
 
 .skills h1::after {
@@ -181,4 +190,3 @@
   right: 0; /* Align cursor to the right of each letter */
   animation: blink-caret 0.75s step-end infinite; /* Adjust timing as needed */
 }
-
